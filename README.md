@@ -1,23 +1,28 @@
 # Project-Day-1---AzData
 
 
-Prereqs
-Step 1: Create Required Azure Resources
-Resource Group
+**Prereqs**
+**Step 1: Create Required Azure Resources
+**Resource Group
 Create a new Resource Group: ecommerce-etl-rg
+
 
 Storage Account
 Create a Storage Account: ecommercestorageacc
 
 Enable Hierarchical Namespace = true (for ADLS Gen2)
 
+
 Go to Containers → Create one called anydata, and one called raw
 
+
 Create another container transformed (optional but good practice)
+
 
 Data Ingestion
 Step 2: Upload Raw CSV
 Sample file: sales_data.csv
+
 
 order_id,product,amount,date
 101,TV,450.00,2024-03-01
@@ -26,7 +31,8 @@ order_id,product,amount,date
 104,Tablet,300.00,2024-03-02
 Upload it into: anydata/ folder in your Storage Account container
 
-Step 3: Set Up Azure Data Factory (ADF)
+
+**Step 3: Set Up Azure Data Factory (ADF)**
 create a new data factory with same resource group then go to the data factory URL.
 Go to Author → Pipelines
 
@@ -41,8 +47,11 @@ Sink: ADLS folder (e.g., bronze/sales_data.csv or intermediate/)
 This copies raw file to your data lake for processing.
 
 Transformation
-Step 4: Create Data Flow for Transformation
-Go to Author → Data Flows → + New Data Flow
+
+
+**Step 4: Create Data Flow for Transformation
+
+**Go to Author → Data Flows → + New Data Flow
 
 Name it: TransformSalesData
 
@@ -100,7 +109,9 @@ In Sink → Settings: Add file system as raw
 
 Folder path: summary/ (or any subfolder)
 
-Step 6: Add to ADF Pipeline
+**Step 6: Add to ADF Pipeline
+**
+
 Go back to your main pipeline.
 
 Add a Data Flow Activity
