@@ -2,8 +2,11 @@
 
 
 **Prereqs**
+
 **Step 1: Create Required Azure Resources
+
 **Resource Group
+
 Create a new Resource Group: ecommerce-etl-rg
 
 
