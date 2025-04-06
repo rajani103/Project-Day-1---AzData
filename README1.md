@@ -58,9 +58,12 @@ Enable:
 2. Derived Column (Convert Data Types)
 Add a Derived Column transformation to cast types:
 
+```
 Column Name	    Expression
 amount_float	toFloat(amount)
 date_actual	    toDate(date, 'yyyy-MM-dd')
+```
+
 Resulting schema:
 
 order_id (string)
